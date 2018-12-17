@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      
+      
+      <a-entity 
+        id="cameraCursor" 
+        position="-2.6 0 0"
+        rotation="0 -10 0"
+        ><a-camera>
+          <a-cursor
+            color="red"
+            geometry="primitive: ring; radiusInner: .02; radiusOuter: .04"
+          ></a-cursor>
+        </a-camera>
+      </a-entity>
+      
+        <a-assets>
+            <a-asset-item id="campsite" src="models/campsite/model.gltf"></a-asset-item>
+            <a-asset-item id="bear" src="models/bear/Mesh_Bear.gltf"></a-asset-item>
+             <a-asset-item id="wolf" src="models/wolf/Mesh_Wolf.gltf"></a-asset-item>
+        </a-assets>
+        
+        <a-entity
+          gltf-model="#campsite"
+          position="-3 -1 -2"
+          sacle="0.5 0.5 0.5"
+          rotation="0 -90 0"
+        ></a-entity>
+        
+        <a-entity
+          gltf-model="#bear"
+          position="-1.48 0.061 -2"
+          scale="0.007 0.007 0.007"
+        ></a-entity>
+        
+        <a-entity
+          gltf-model="#wolf"
+          position="-1.29 -0.01 -0.39"
+          scale="0.005 0.005 0.005"
+          rotation="0 173.7 0"
+        ></a-entity>
+        
+    </a-scene>
+  </body>
+</html>
